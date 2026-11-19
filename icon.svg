@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#176B50"/><stop offset="1" stop-color="#06432F"/></linearGradient>
+ <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D6FAE7"/><stop offset="1" stop-color="#74CFA2"/></linearGradient>
+</defs>
+<rect width="512" height="512" rx="120" fill="url(#bg)"/>
+<circle cx="255" cy="254" r="182" fill="none" stroke="#FFFFFF" stroke-opacity=".11" stroke-width="2"/>
+<path d="M113 339C170 401 290 405 381 302" fill="none" stroke="#95E5BD" stroke-width="19" stroke-linecap="round" stroke-opacity=".9"/>
+<path d="M343 307l41-12-9 44" fill="none" stroke="#95E5BD" stroke-linejoin="round" stroke-linecap="round" stroke-width="18"/>
+<!-- horizontal dumbbell -->
+<g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M168 272h176" stroke-width="22"/>
+ <rect x="116" y="217" width="45" height="110" rx="14" stroke-width="15"/>
+ <path d="M94 233v78M166 240v65" stroke-width="13"/>
+ <rect x="351" y="217" width="45" height="110" rx="14" stroke-width="15"/>
+ <path d="M416 233v78M346 240v65" stroke-width="13"/>
+</g>
+<!-- compact diagonal syringe above dumbbell, separate visual -->
+<g transform="translate(280 122) rotate(38)">
+ <rect x="-22" y="-2" width="44" height="75" rx="9" fill="url(#mint)"/>
+ <rect x="-10" y="-33" width="20" height="32" rx="6" fill="white"/>
+ <path d="M-25-36h50" stroke="white" stroke-width="9" stroke-linecap="round"/>
+ <path d="M0 73v29" stroke="white" stroke-width="8" stroke-linecap="round"/>
+ <path d="M0 103v19" stroke="#D6FAE7" stroke-width="4" stroke-linecap="round"/>
+ <path d="M-13 20h26M-13 38h26M-13 56h26" stroke="#0D6247" stroke-width="4" opacity=".8"/>
+</g>
+</svg>

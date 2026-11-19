@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0E513C">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Minha Evolução">
+  <meta name="description" content="Sua evolução física em um só lugar: aplicações, peso, medidas, fotos e academia.">
+  <link rel="icon" type="image/png" href="./favicon-48.png?v=1">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png?v=1">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./style.css?v=1">
+  <title>Minha Evolução | Minha história, meus resultados</title>
+</head>
+<body>
+  <div id="app" aria-live="polite">
+    <div class="loading-screen"><div class="loading-logo"><img src="./icon-192.png" alt=""></div><div class="spinner"></div><p>Preparando sua evolução...</p></div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modal-root"></div>
+  <script src="./config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script defer src="./app.js?v=1"></script>
+</body>
+</html>

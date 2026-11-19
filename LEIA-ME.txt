@@ -1,0 +1,62 @@
+MINHA EVOLUÇÃO | 1.0
+Aplicativo web instalável no iPhone 17 e acessível por computador.
+SEM FACE ID. Login por e-mail e senha. Continuar conectado opcional.
+
+O QUE FOI CRIADO
+- Dashboard com indicadores pessoais e gráficos reais (sem números fictícios)
+- Diário de aplicações: data/hora, dose informada, local e observações
+- Peso, metas, seis medidas e curvas históricas
+- Fotos da galeria/câmera com datas antigas e comparação lado a lado
+- Fichas de treino, exercícios, séries, repetições, cargas e histórico
+- Relatórios e linha do tempo de atividades
+- Nuvem com login, Row Level Security e fotos privadas
+- Aparência branca e verde, celular + computador, ícone halter/seringa
+- Não possui controle alimentar e NÃO utiliza Face ID
+
+ATIVAÇÃO DA NUVEM (necessária antes de usar)
+1. Entre em https://supabase.com e crie um projeto NOVO chamado Minha Evolução.
+   Isso mantém o Meu Financeiro completamente separado.
+2. No projeto, abra SQL Editor -> New query.
+3. Cole TODO o conteúdo de supabase-setup.sql e clique em RUN.
+   As 9 tabelas, as regras RLS e o bucket privado serão preparados.
+4. Abra Project Settings -> API Keys (a localização pode variar).
+   Copie a Project URL e somente a chave PÚBLICA (publishable ou anon).
+   NUNCA use a chave secret/service_role no HTML, GitHub ou config.js.
+5. Abra config.js e coloque as duas informações nos campos indicados:
+     supabaseUrl: 'https://xxxxx.supabase.co',
+     supabaseAnonKey: 'sb_publishable_...'  (ou chave anon JWT pública)
+   Salve o arquivo.
+6. Em Authentication -> URL Configuration, configure Site URL com a URL
+   definitiva de seu GitHub Pages (ex.: https://usuario.github.io/minha-evolucao/).
+   Em Redirect URLs, inclua esse mesmo endereço e, se preciso,
+   https://usuario.github.io/minha-evolucao/**
+7. Em Authentication -> Providers -> Email, deixe Email habilitado.
+   Caso a confirmação de e-mail esteja ligada, confirme o e-mail cadastrado.
+
+PUBLICAR NO GITHUB PAGES
+1. Crie um REPOSITÓRIO NOVO, por exemplo "minha-evolucao".
+   NÃO substitua arquivos do seu repositório Meu Financeiro.
+2. Envie todos os arquivos do ZIP para a raiz do novo repositório.
+3. Settings -> Pages -> Deploy from a branch -> main -> /(root) -> Save.
+4. Abra https://SEU-USUARIO.github.io/minha-evolucao/.
+5. Crie uma conta pelo app. No primeiro acesso, marque "Continuar conectado"
+   para salvar sua sessão. Não é necessário Face ID.
+6. Em Safari no iPhone: Compartilhar -> Adicionar à Tela de Início.
+
+SEM EDITAR CONFIG.JS: a tela inicial também permite informar URL/chave pública
+pelo navegador. Essa configuração será salva somente naquele aparelho.
+Para compartilhar a configuração entre iPhone e computador, use config.js.
+
+PRIVACIDADE
+- Fotos NÃO são enviadas para o GitHub, e sim ao Storage privado do Supabase.
+- O bucket evolution-photos é configurado como PRIVATE. NÃO o torne público.
+- As tabelas são restritas ao usuário autenticado via RLS.
+- Nunca compartilhe senhas nem service_role.
+- Para fotos históricas: selecione a imagem e ajuste a data manualmente.
+- As senhas são administradas pelo Supabase Auth e não ficam no HTML.
+- Este é um registro pessoal, não um calculador de doses ou orientação clínica.
+
+OBSERVAÇÃO SOBRE TESTES
+O HTML/JS e os arquivos do pacote foram validados estruturalmente.
+A conexão à nuvem precisa das suas credenciais e deve ser testada
+em seu projeto Supabase após as etapas acima.
